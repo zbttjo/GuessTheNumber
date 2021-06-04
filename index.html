@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><title>Guess the Number</title>
+<link href = "css.css" type="text/css" rel = "stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div id="loading">
+  <div id="loading-center">
+  <div id="loading-center-absolute">
+  <div id="object"></div>
+  </div>
+  </div>
+   
+  </div>
+  
+  
+  <div id="header">
+  <div id="header-left">
+
+<!--The "onLoad" will run the "getNumber" function from index.js immediately after loading the page.-->
+<body onload="getNumber()">
+  <script>
+    $(window).load(function() {
+      $('#loading').hide();
+    });
+  </script>
+  
+  
+    <h1>Guess the Number</h1>
+      
+      <p>The computer is thinking of a number between 1 and 1000.</p>
+
+      <!--The id "guesser" refers to the guessNumber function in index.js. "onfocus" sets the value of the input back to an empty string when input is in focus. -->
+    <label><input id="guesser" onfocus="this.value=''" type="number" min="1" max="1000"></label>
+    
+      
+        <button id = "btn" type="submit" onclick="guessNumber()">Submit</button>
+        <button id = "rst" onclick="window.location.reload();">Restart</button>
+        
+
+    <section id="sresult">
+          <p>Result</p>
+    </section>
+
+    
+    
+      
+    <script src="index.js"></script>
+    </body>
+    </html>
